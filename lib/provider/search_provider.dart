@@ -40,7 +40,7 @@ class SearchProvider extends ChangeNotifier {
       _state = ResultState.Error;
       notifyListeners();
       return _message =
-          'TERJADI KESALAHAN, SILAHKAN PERIKSA KONEKSI INTERNET ANDA \n\nDetail: \nError --> $e';
+          'TERJADI KESALAHAN, SILAHKAN PERIKSA KONEKSI INTERNET ANDA';
     }
   }
 }

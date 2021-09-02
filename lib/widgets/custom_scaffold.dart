@@ -14,14 +14,6 @@ class CustomScaffold extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          // IconButton(
-          //   icon: defaultTargetPlatform == TargetPlatform.iOS
-          //       ? Icon(CupertinoIcons.back)
-          //       : Icon(Icons.arrow_back),
-          //   onPressed: () {
-          //     Navigator.pop(context);
-          //   },
-          // ),
           IconButton(
             icon: defaultTargetPlatform == TargetPlatform.iOS
                 ? Icon(CupertinoIcons.back)

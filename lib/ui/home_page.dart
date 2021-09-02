@@ -20,20 +20,6 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-/*
-class _HomePageState extends State<HomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: ChangeNotifierProvider<ListProvider>(
-        create: (_) => ListProvider(apiService: ApiService()),
-        child: RestaurantListPage(),
-      ),
-    );
-  }
-}
-*/
-
 class _HomePageState extends State<HomePage> {
   final NotificationHelper _notificationHelper = NotificationHelper();
 
@@ -46,7 +32,6 @@ class _HomePageState extends State<HomePage> {
       child: RestaurantListPage(),
     ),
     FavoritePage(),
-    //SettingsPage(),
     ChangeNotifierProvider<SchedulingProvider>(
       create: (_) => SchedulingProvider(),
       child: SettingsPage(),

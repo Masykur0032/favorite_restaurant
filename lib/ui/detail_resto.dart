@@ -8,37 +8,11 @@ import 'package:provider/provider.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DetailPage extends StatefulWidget {
-  //late final Favorite favorite;
-
   @override
   _DetailPageState createState() => _DetailPageState();
 }
 
 class _DetailPageState extends State<DetailPage> {
-  // late final Favorite? favorite;
-  // String _idFavoriteController = '';
-  // String _nameController = '';
-  // String _urlImageController = '';
-  // String _cityController = '';
-  // String _ratingController = '';
-
-  // DatabaseHelper dbHelper = DatabaseHelper();
-
-  // bool _isUpdate = false;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   if (favorite != null) {
-  //     _idFavoriteController = favorite!.idFavorite;
-  //     _nameController = favorite!.name;
-  //     _urlImageController = favorite!.urlImage;
-  //     _cityController = favorite!.city;
-  //     _ratingController = favorite!.rating.toString();
-  //     _isUpdate = true;
-  //   }
-  // }
-
   int count = 0;
 
   DbHelper dbHelper = DbHelper();
@@ -78,68 +52,6 @@ class _DetailPageState extends State<DetailPage> {
                               ),
                               RaisedButton(
                                   onPressed: () async {
-                                    // if (!_isUpdate) {
-                                    //   final favorite = Favorite(
-                                    //     idFavorite: _idFavoriteController,
-                                    //     name: _nameController,
-                                    //     urlImage: _urlImageController,
-                                    //     city: _cityController,
-                                    //     rating: _ratingController,
-                                    //   );
-                                    //   Provider.of<DbProvider>(context,
-                                    //           listen: false)
-                                    //       .addFavorite(favorite);
-                                    // } else {
-                                    //   final favorite = Favorite(
-                                    //     idFavorite: _idFavoriteController,
-                                    //     name: _nameController,
-                                    //     urlImage: _urlImageController,
-                                    //     city: _cityController,
-                                    //     rating: _ratingController,
-                                    //   );
-                                    //   Provider.of<DbProvider>(context,
-                                    //           listen: false)
-                                    //       .updateFavorite(favorite);
-                                    // }
-
-                                    // for (int i = 0;
-                                    //     i < restaurantDetail.menus.foods.length;
-                                    //     i++) {
-                                    //   String foods =
-                                    //       restaurantDetail.menus.foods[i].name;
-                                    // }
-
-                                    // String foods = '- ' +
-                                    //     restaurantDetail.menus.foods
-                                    //         .join('\n- ');
-                                    // String drinks = '- ' +
-                                    //     restaurantDetail.menus.drinks
-                                    //         .join('\n- ');
-
-                                    // List<String>? foodies =
-                                    //     (restaurantDetail.menus.foods)
-                                    //         .map((item) => item as String)
-                                    //         .toList();
-
-                                    // String foodie = '';
-
-                                    // for (int i = 0;
-                                    //     i < restaurantDetail.menus.foods.length;
-                                    //     i++) {
-                                    //   foodie =
-                                    //       restaurantDetail.menus.foods[i].name;
-                                    // }
-
-                                    // String drinkie = '';
-
-                                    // for (int i = 0;
-                                    //     i <
-                                    //         restaurantDetail
-                                    //             .menus.drinks.length;
-                                    //     i++) {
-                                    //   drinkie =
-                                    //       restaurantDetail.menus.drinks[i].name;
-                                    // }
                                     String foodie = '- ' +
                                         restaurantDetail.menus.foods[0].name +
                                         '\n- ' +
@@ -185,14 +97,6 @@ class _DetailPageState extends State<DetailPage> {
                                   )),
                             ],
                           ),
-                          /*
-                          Center(
-                            child: Text(
-                              restaurantDetail.name,
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                          ),
-                          */
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -363,16 +267,6 @@ class _DetailPageState extends State<DetailPage> {
       iosBuilder: _buildIos,
     );
   }
-
-  // @override
-  // void dispose() {
-  //   _idFavoriteController.dispose();
-  //   _nameController.dispose();
-  //   _urlImageController.dispose();
-  //   _cityController.dispose();
-  //   _ratingController.dispose();
-  //   super.dispose();
-  // }
 
   void updateListView() {
     final Future<Database> dbFuture = dbHelper.initDb();

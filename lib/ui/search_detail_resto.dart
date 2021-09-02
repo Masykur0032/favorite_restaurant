@@ -75,37 +75,6 @@ class _DetailPageSearchState extends State<DetailPageSearch> {
                               ),
                               RaisedButton(
                                   onPressed: () async {
-                                    // if (!_isUpdate) {
-                                    //   final favorite = Favorite(
-                                    //     idFavorite: _idFavoriteController.text,
-                                    //     name: _nameController.text,
-                                    //     urlImage: _urlImageController.text,
-                                    //     city: _cityController.text,
-                                    //     rating: _ratingController.text,
-                                    //   );
-                                    //   Provider.of<DbProvider>(context,
-                                    //           listen: false)
-                                    //       .addFavorite(favorite);
-                                    // } else {
-                                    //   final favorite = Favorite(
-                                    //     idFavorite: _idFavoriteController.text,
-                                    //     name: _nameController.text,
-                                    //     urlImage: _urlImageController.text,
-                                    //     city: _cityController.text,
-                                    //     rating: _ratingController.text,
-                                    //   );
-                                    //   Provider.of<DbProvider>(context,
-                                    //           listen: false)
-                                    //       .updateFavorite(favorite);
-                                    // }
-
-                                    // String foods = '- ' +
-                                    //     restaurantDetail.menus.foods
-                                    //         .join('\n- ');
-                                    // String drinks = '- ' +
-                                    //     restaurantDetail.menus.drinks
-                                    //         .join('\n- ');
-
                                     String foodie = '- ' +
                                         restaurantDetail.menus.foods[0].name +
                                         '\n- ' +
@@ -148,21 +117,8 @@ class _DetailPageSearchState extends State<DetailPageSearch> {
                                     style:
                                         Theme.of(context).textTheme.headline3,
                                   )),
-                              /*
-                              Icon(Platform.isIOS
-                                  ? CupertinoIcons.heart
-                                  : Icons.favorite),
-                              */
                             ],
                           ),
-                          /*
-                          Center(
-                            child: Text(
-                              restaurantDetail.name,
-                              style: Theme.of(context).textTheme.headline6,
-                            ),
-                          ),
-                          */
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
@@ -333,16 +289,6 @@ class _DetailPageSearchState extends State<DetailPageSearch> {
       iosBuilder: _buildIos,
     );
   }
-
-  // @override
-  // void dispose() {
-  //   _idFavoriteController.dispose();
-  //   _nameController.dispose();
-  //   _urlImageController.dispose();
-  //   _cityController.dispose();
-  //   _ratingController.dispose();
-  //   super.dispose();
-  // }
 
   void updateListView() {
     final Future<Database> dbFuture = dbHelper.initDb();

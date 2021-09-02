@@ -30,22 +30,11 @@ class DetailProviderSearch extends ChangeNotifier {
       _state = ResultState.HasData;
       notifyListeners();
       return _detailSearch = restaurant;
-      /*
-      if (restaurant.restaurant == null) {
-        _state = ResultState.NoData;
-        notifyListeners();
-        return _message = 'Empty Data';
-      } else {
-        _state = ResultState.HasData;
-        notifyListeners();
-        return _detailSearch = restaurant;
-      }
-      */
     } catch (e) {
       _state = ResultState.Error;
       notifyListeners();
       return _message =
-          'TERJADI KESALAHAN, SILAHKAN PERIKSA KONEKSI INTERNET ANDA \n\nDetail: \nError --> $e';
+          'TERJADI KESALAHAN, SILAHKAN PERIKSA KONEKSI INTERNET ANDA';
     }
   }
 }

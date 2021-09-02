@@ -3,7 +3,6 @@ import 'package:fav_resto/notification/custom_dialog.dart';
 import 'package:fav_resto/notification/scheduling_provider.dart';
 import 'package:fav_resto/widgets/platform_widget.dart';
 import 'package:flutter/cupertino.dart';
-//import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -15,26 +14,6 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-//   late ScrollController _controller;
-//   @override
-//  void initState() {
-//  _controller = ScrollController();
-//  _controller.addListener(_scrollListener);//the listener for up and down.
-//  super.initState();
-// }
-// _scrollListener() {
-//   if (_controller.offset >= _controller.position.maxScrollExtent &&
-//      !_controller.position.outOfRange) {
-//    setState(() {//you can do anything here
-//    });
-//  }
-//  if (_controller.offset <= _controller.position.minScrollExtent &&
-//     !_controller.position.outOfRange) {
-//    setState(() {//you can do anything here
-//     });
-//   }
-// }
-
   Widget _buildAndroid(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -75,38 +54,6 @@ class _SettingsPageState extends State<SettingsPage> {
         ),
       ),
     ]);
-    // return ListView(
-    //   children: [
-    //     Material(
-    //       child: ListTile(
-    //         title: Text('Dark Theme'),
-    //         trailing: Switch.adaptive(
-    //           value: false,
-    //           onChanged: (value) => customDialog(context),
-    //         ),
-    //       ),
-    //     ),
-    //     Material(
-    //       child: ListTile(
-    //         title: Text('Scheduling News'),
-    //         trailing: Consumer<SchedulingProvider>(
-    //           builder: (context, scheduled, _) {
-    //             return Switch.adaptive(
-    //               value: scheduled.isScheduled,
-    //               onChanged: (value) async {
-    //                 if (Platform.isIOS) {
-    //                   customDialog(context);
-    //                 } else {
-    //                   scheduled.scheduledNews(value);
-    //                 }
-    //               },
-    //             );
-    //           },
-    //         ),
-    //       ),
-    //     ),
-    //   ],
-    // );
   }
 
   @override
